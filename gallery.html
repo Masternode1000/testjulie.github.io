@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Um Bongert</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+
+  </head>
+  <body>
+
+    <div class="not-index-nav" id="gallery-nav">
+      <a class="translate" data-key="home" href="index.html">Home</a>
+      <a class="translate" data-key="gallery" href="gallery.html">Photo Gallery</a>
+      <a class="translate" data-key="price-list-nav" href="pricelist.html">Price List</a>
+      <a class="translate" data-key="map" href="map.html">Map</a>
+      <a class="translate" data-key="contact" href="contact.html">Contact Us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction_2()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="second-section">
+      <div class="h-second-section">
+        <h1 class="translate" data-key="gallery">Gallery</h1>
+      </div>
+    </div>
+
+
+    <div class="gallery">
+
+        <figure class="gallery__item gallery__item--1">
+          <img src="images/front5.webp" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/front6.webp" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/terrace.webp" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/indoor.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/indoor2.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/living-room.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/kitchen.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/bed1.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/bed3.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/bathroom.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/bathroom2.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+        <figure class=”gallery__item gallery__item--1">
+          <img src="images/bathroom3.jpg" class="gallery__img modal-target" alt="Image 1">
+        </figure>
+
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <a id="modal-prev" class="modal-prev">&#8249;</a>
+      <img id="modal-content" class="modal-content">
+      <a id="modal-next" class="modal-next">&#8250;</a>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="address">
+          <h6>7, Um Bongert </h6>
+          <h6>5451, Stadtbredimus</h6>
+          <h6>Luxemburg</h6>
+        </div>
+        <div class="contact-info">
+          <h6>Patricia Recher</h6>
+          <h6 class="translate" data-key="phone">Phone: +352 23 69 93 66</h6>
+          <h6 class="translate" data-key="cell">Cell: +352 621 791 566</h6>
+          <h6>Email: precher@pt.lu</h6>
+        </div>
+        <div class="languages">
+            <div><img class="flag" id="en" src="images/flags/en.jpg" alt="English flag"></div>
+            <div><img class="flag" id="de" src="images/flags/de.jpg" alt="German flag"></div>
+            <div><img class="flag" id="fr" src="images/flags/fr.jpg" alt="French flag"></div>
+            <div><img class="flag" id="nl" src="images/flags/nl.jpg" alt="Dutch flag"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        var modal = document.getElementById('modal');
+
+        var modalClose = document.getElementById('modal-close');
+        modalClose.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        var modalPrev = document.getElementById('modal-prev');
+        var modalNext = document.getElementById('modal-next');
+        var images = document.getElementsByClassName('gallery__img');
+        var currentImageIndex;
+
+        // global handler
+        document.addEventListener('click', function (e) {
+            if (e.target.className.indexOf('modal-target') !== -1) {
+                var img = e.target;
+                var modalImg = document.getElementById("modal-content");
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                // captionText.innerHTML = img.alt;
+                for (var i = 0; i < images.length; i++) {
+                  if (images[i] === img) {
+                      currentImageIndex = i;
+                      break;
+                  }
+                }
+            }
+        });
+
+        modalPrev.addEventListener('click', function () {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          var img = images[currentImageIndex];
+          var modalImg = document.getElementById("modal-content");
+          var captionText = document.getElementById("modal-caption");
+          modalImg.src = img.src;
+          captionText.innerHTML = img.alt;
+        });
+
+        modalNext.addEventListener('click', function () {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          var img = images[currentImageIndex];
+          var modalImg = document.getElementById("modal-content");
+          var captionText = document.getElementById("modal-caption");
+          modalImg.src = img.src;
+          captionText.innerHTML = img.alt;
+        });
+
+    </script>
+    <script src="myscripts.js"></script>
+
+
+  </body>
+</html>

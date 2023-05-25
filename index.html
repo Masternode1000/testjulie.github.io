@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Um Bongert 7</title>
+
+    <!-- link css and js -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+  </head>
+
+
+  <body>
+    <header>
+      <div class="cover">
+        <h1>Um Bongert 7</h1>
+        <h6 class="translate" data-key="welcome">Welcome to the vineyards</h6>
+        <div class="topnav" id="myTopnav">
+          <a class="translate" data-key="home" href="index.html">Home</a>
+          <a class="translate" data-key="gallery" href="gallery.html">Photo Gallery</a>
+          <a class="translate" data-key="price-list-nav" href="pricelist.html">Price List</a>
+          <a class="translate" data-key="map" href="map.html">Map</a>
+          <a class="translate" data-key="contact" href="contact.html">Contact Us</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="second-section">
+      <img src="images/front3.jpg" alt="Front-side of the studio">
+      <div class="p-second-section">
+        <p class="translate" data-key="intro">Welcome to our delightful studio nestled in the heart of Stadtbredimus, Luxembourg. Our cozy and inviting space offers a tranquil retreat surrounded by the natural beauty of the vineyards, while being conveniently located near the Mosel River. Experience the perfect blend of comfort and serenity as you immerse yourself in the charm of this idyllic setting.</p>
+      </div>
+    </div>
+
+
+    <div class="third-section services">
+      <div class="row first-row">
+        <div class="service">
+          <div><img src="images/services/linen.jpg" alt="bed icon"></div>
+          <p class="translate" data-key="bed-linen">Bed Linen</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/heating.jpg" alt="heating icon"></div>
+          <p class="translate" data-key="heating">Heating</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/balcony.jpg" alt="balcony icon"></div>
+          <p class="translate" data-key="terrace">Terrace</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/parking.jpg" alt="parking icon"></div>
+          <p class="translate" data-key="parking">Parking</p>
+        </div>
+      </div>
+
+      <div class="row second-row">
+        <div class="service">
+          <div><img src="images/services/wifi.jpg" alt="wifi icon"></div>
+          <p class="translate" data-key="wifi">Wifi</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/tv.jpg" alt="TV icon"></div>
+          <p class="translate" data-key="tv">Television</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/washing-machine.jpg" alt="washing machine icon"></div>
+          <p class="translate" data-key="washing-machine">Washing Machine</p>
+        </div>
+        <div class="service">
+          <div><img src="images/services/lamp.jpg" alt="lamp icon"></div>
+          <p class="translate" data-key="electricity">Electricity Included</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="studio-clip">
+      <video id="myVideo" width="700" height="aoto" controls>
+        <source src="images/umbongert.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+
+    <footer>
+      <div class="footer">
+        <div class="address">
+          <h6>7, Um Bongert </h6>
+          <h6>5451, Stadtbredimus</h6>
+          <h6>Luxemburg</h6>
+        </div>
+        <div class="contact-info">
+          <h6>Patricia Recher</h6>
+          <h6 class="translate" data-key="phone">Phone: +352 23 69 93 66</h6>
+          <h6 class="translate" data-key="cell">Cell: +352 621 791 566</h6>
+          <h6>Email: precher@pt.lu</h6>
+        </div>
+        <div class="languages">
+            <div><img class="flag" id="en" src="images/flags/en.jpg" alt="English flag"></div>
+            <div><img class="flag" id="de" src="images/flags/de.jpg" alt="German flag"></div>
+            <div><img class="flag" id="fr" src="images/flags/fr.jpg" alt="French flag"></div>
+            <div><img class="flag" id="nl" src="images/flags/nl.jpg" alt="Dutch flag"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="myscripts.js"></script>
+  </body>
+</html>
